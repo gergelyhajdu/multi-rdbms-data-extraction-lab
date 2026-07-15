@@ -6,6 +6,24 @@ Ez a repó egy többforrásos adatkinyerési portfólióprojektet mutat be. A c�
 
 A projektben öt relációs adatbázis export nézeten keresztül adja át a rendelési adatokat, a hatodik forrás pedig egy manual / legacy CSV file-drop bemenet.
 
+## Dokumentáció
+
+A részletes magyar dokumentáció külön fájlokban található a `docs/` mappában.
+
+| Dokumentum | Tartalom |
+| --- | --- |
+| [docs/01_project_overview.md](docs/01_project_overview.md) | Projektcél, forrásrendszerek, fő architektúra, v2.0.3 állapot és AI-assisted fejlesztési megjegyzések |
+| [docs/02_source_export_views.md](docs/02_source_export_views.md) | Export nézetek szerepe, forrásoldali SELECT-ek, egységes kimeneti logika és schema drift megjegyzés |
+| [docs/03_readonly_export_access.md](docs/03_readonly_export_access.md) | Read-only export user szemlélet, jogosultsági modell, konfigurációs egyszerűsítés és secret-kezelési megjegyzés |
+| [docs/04_manual_csv_source.md](docs/04_manual_csv_source.md) | Manual CSV / file-drop forrás, baseline és working input mappák, data contract jellegű validáció |
+| [docs/05_codex_workspace_started.md](docs/05_codex_workspace_started.md) | Codex workspace indulása, izolált munkamappa, első ellenőrzött fájllétrehozási teszt |
+| [docs/06_eff_dat_extraction_logic.md](docs/06_eff_dat_extraction_logic.md) | `EFF_DAT` alapú kinyerési logika, staging → landing safe replace, hibaági viselkedés és lemezterület-megjegyzés |
+| [docs/07_manual_csv_test_series.md](docs/07_manual_csv_test_series.md) | Manual CSV tesztsorozat, T01–T08 tesztesetek, `SUCCESS_EMPTY` értelmezés és evidence hivatkozások |
+| [docs/08_file_transfer_boundary_and_codex_smb_diagnostics.md](docs/08_file_transfer_boundary_and_codex_smb_diagnostics.md) | File transfer határvonal, SMB / UNC diagnosztika, Codex session korlátok és local file-drop döntés |
+| [docs/09_database_connection_tests.md](docs/09_database_connection_tests.md) | Öt adatbázisos connection test, driver- és portellenőrzések, diagnosztikai futások és végső 5/5 siker |
+| [docs/10_database_extraction.md](docs/10_database_extraction.md) | Adatbázisos CSV extraction, created / replaced / failure futások, MySQL hibaági landing-védelem |
+| [docs/11_full_extraction_test_series.md](docs/11_full_extraction_test_series.md) | Teljes többnapos end-to-end tesztsorozat, manual CSV + 5 DB forrás, rerun, failure simulation és final `PASS` |
+
 ## Mit bizonyít ez a projekt?
 
 A projekt nem csak azt mutatja meg, hogy több adatbázishoz lehet kapcsolódni, hanem egy kontrollált adatkinyerési folyamatot is bizonyít:
@@ -199,24 +217,6 @@ Kiemelt képek:
 images/09_database_connection_tests/06_all_five_database_sources_success.png
 images/10_database_extraction/01_database_extraction_5db_success.png
 images/11_full_extraction_test_series/01_full_extraction_test_series_pass.png
-```
-
-## Dokumentáció
-
-Részletes leírások:
-
-```text
-docs/01_project_overview.md
-docs/02_source_export_views.md
-docs/03_readonly_export_access.md
-docs/04_manual_csv_source.md
-docs/05_codex_workspace_started.md
-docs/06_eff_dat_extraction_logic.md
-docs/07_manual_csv_test_series.md
-docs/08_file_transfer_boundary_and_codex_smb_diagnostics.md
-docs/09_database_connection_tests.md
-docs/10_database_extraction.md
-docs/11_full_extraction_test_series.md
 ```
 
 ## Helyi konfiguráció és smoke test

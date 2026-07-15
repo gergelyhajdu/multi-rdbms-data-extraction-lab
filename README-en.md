@@ -8,6 +8,24 @@ The project uses five relational database sources exposed through controlled exp
 
 > This English README is a concise project overview for international readers. The detailed project documentation is primarily written in Hungarian in the `docs/` folder.
 
+## Documentation
+
+The detailed Hungarian documentation is available in separate files under the `docs/` folder.
+
+| Document | Contents |
+| --- | --- |
+| [docs/01_project_overview.md](docs/01_project_overview.md) | Project goal, source systems, main architecture, v2.0.3 status and AI-assisted development notes |
+| [docs/02_source_export_views.md](docs/02_source_export_views.md) | Role of export views, source-side SELECT checks, unified output logic and schema drift note |
+| [docs/03_readonly_export_access.md](docs/03_readonly_export_access.md) | Read-only export user approach, permission model, configuration simplification and secret-management note |
+| [docs/04_manual_csv_source.md](docs/04_manual_csv_source.md) | Manual CSV / file-drop source, baseline and working input folders, data-contract style validation |
+| [docs/05_codex_workspace_started.md](docs/05_codex_workspace_started.md) | Codex workspace startup, isolated working folder and first controlled file-creation test |
+| [docs/06_eff_dat_extraction_logic.md](docs/06_eff_dat_extraction_logic.md) | `EFF_DAT`-based extraction logic, staging → landing safe replace, failure behavior and disk-space note |
+| [docs/07_manual_csv_test_series.md](docs/07_manual_csv_test_series.md) | Manual CSV test series, T01–T08 test cases, `SUCCESS_EMPTY` interpretation and evidence references |
+| [docs/08_file_transfer_boundary_and_codex_smb_diagnostics.md](docs/08_file_transfer_boundary_and_codex_smb_diagnostics.md) | File transfer boundary, SMB / UNC diagnostics, Codex session limitations and local file-drop decision |
+| [docs/09_database_connection_tests.md](docs/09_database_connection_tests.md) | Five-database connection test, driver and port checks, diagnostic runs and final 5/5 success |
+| [docs/10_database_extraction.md](docs/10_database_extraction.md) | Database CSV extraction, created / replaced / failure runs and MySQL failure-path landing protection |
+| [docs/11_full_extraction_test_series.md](docs/11_full_extraction_test_series.md) | Full multi-day end-to-end test series, manual CSV + 5 DB sources, rerun, failure simulation and final `PASS` |
+
 ## What this project demonstrates
 
 This project is more than a connection demo. It demonstrates a controlled extraction workflow with:
@@ -203,24 +221,6 @@ Selected screenshots:
 images/09_database_connection_tests/06_all_five_database_sources_success.png
 images/10_database_extraction/01_database_extraction_5db_success.png
 images/11_full_extraction_test_series/01_full_extraction_test_series_pass.png
-```
-
-## Documentation
-
-Detailed documentation files:
-
-```text
-docs/01_project_overview.md
-docs/02_source_export_views.md
-docs/03_readonly_export_access.md
-docs/04_manual_csv_source.md
-docs/05_codex_workspace_started.md
-docs/06_eff_dat_extraction_logic.md
-docs/07_manual_csv_test_series.md
-docs/08_file_transfer_boundary_and_codex_smb_diagnostics.md
-docs/09_database_connection_tests.md
-docs/10_database_extraction.md
-docs/11_full_extraction_test_series.md
 ```
 
 ## Local configuration and smoke test
