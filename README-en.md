@@ -11,8 +11,6 @@ This repository presents a multi-source data extraction portfolio lab. The goal 
 
 The project uses five relational database sources exposed through controlled export views. A sixth source represents a manual / legacy CSV file-drop input.
 
-> This English README is a concise project overview for international readers. The detailed project documentation is primarily written in Hungarian in the `docs/` folder.
-
 ## Documentation
 
 The detailed Hungarian documentation is available in separate files under the `docs/` folder.
