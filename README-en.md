@@ -1,4 +1,4 @@
-[![](https://raw.githubusercontent.com/gergelyhajdu/gergelyhajdu/main/assets/en.png)English](README-en.md) | [![](https://raw.githubusercontent.com/gergelyhajdu/gergelyhajdu/main/assets/hu.png)Hungarian](README.md)
+[🇬🇧&nbsp;English](README-en.md) | [🇭🇺&nbsp;Hungarian](README.md)
 
 > This document provides a concise English overview of the project.
 > The Hungarian README is the primary and more detailed documentation.
