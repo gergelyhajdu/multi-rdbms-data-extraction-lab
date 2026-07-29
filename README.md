@@ -1,4 +1,4 @@
-[🇬🇧&nbsp;English](README-en.md) | [🇭🇺&nbsp;Hungarian](README.md)
+[![English](https://raw.githubusercontent.com/gergelyhajdu/gergelyhajdu/main/assets/en.png)](README-en.md) [English](README-en.md) | [![Hungarian](https://raw.githubusercontent.com/gergelyhajdu/gergelyhajdu/main/assets/hu.png)](README.md) [Hungarian](README.md)
 
 # Multi-RDBMS Data Extraction Lab
 
