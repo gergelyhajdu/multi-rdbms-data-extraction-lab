@@ -282,10 +282,14 @@ A projekt célja nem egy teljes production-grade orchestration platform megvaló
 - unit test csomag;
 - konténerizált teljes laborkörnyezet.
 
+Ismert, felülvizsgálandó pontok:
+
+- a `run_full_extraction_test_series.ps1` jelenlegi összesített `PASS` feltétele az adatbázisos extraction és DB-kimeneti ellenőrzésekre épül; a manual CSV ág státusza, exit code-ja és landing kimenete jelenleg nem része ennek az összesített sikerfeltételnek. A tesztharness következő javításánál ezt be kell vonni, majd célzott negatív teszttel ellenőrizni;
+- az adatbázisos `EFF_DAT` szűrés dátumvalidációját és SQL-paraméterezését felül kell vizsgálni, és a közvetlen értékbeillesztés helyett következetes paraméterezett / bind változós megoldásra kell átállni.
+
 Tudatos későbbi fejlesztési irányok:
 
 - a `check_database_connections.py` és `extract_database_sources.py` közös részeinek kiszervezése például `src/db_sources.py` modulba;
-- `EFF_DAT` lekérdezések további paraméterezése / bind változók használata;
 - manual CSV customer snapshot logika point-in-time historizálása;
 - staging-kezelés egységesítése a DB és manual CSV ág között;
 - PowerShell scriptek hordozhatóbb Python-útvonal kezelése `PYTHON_EXE` override + `python` / `py` fallback megoldással;

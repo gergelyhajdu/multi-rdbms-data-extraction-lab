@@ -53,6 +53,12 @@ Ellenőrzött elemek:
 - az exit code értékek;
 - a teszt végén a konfiguráció visszaállítása.
 
+## Ismert, felülvizsgálandó tesztharness-pont
+
+A közzétett tesztfutásokban a manual CSV ág sikeresen lefutott, és a napokra bontott eredmények ezt külön is dokumentálják. A `run_full_extraction_test_series.ps1` jelenlegi összesített napi `PASS` feltétele azonban az adatbázisos extraction és DB-kimeneti ellenőrzésekre épül; a manual CSV ág státusza, exit code-ja és landing kimenete jelenleg nem része ennek az összesített sikerfeltételnek.
+
+Ezért egy későbbi javításban a manual CSV ágat is be kell vonni az összesített `PASS` feltételbe, majd célzott negatív teszttel ellenőrizni kell, hogy hibás vagy hiányzó manual ág esetén a teljes teszteset ne adhasson `PASS` eredményt. A jelenlegi megjegyzés a tesztharness ellenőrzési határát dokumentálja; a már közzétett futások manual CSV eredményeit nem módosítja.
+
 ## Eredmény napokra bontva
 
 | EFF_DAT      | Manual CSV          | Database extraction | DB landing files | Eredmény |

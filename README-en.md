@@ -289,10 +289,14 @@ This project is not intended to be a full production-grade orchestration platfor
 - unit test suite;
 - fully containerized lab environment.
 
+Known issues to review:
+
+- the current aggregate `PASS` condition in `run_full_extraction_test_series.ps1` is based on database extraction and database output checks; the manual CSV branch status, exit code and landing output are not currently part of that aggregate success condition. The next test-harness update should include them and verify the behavior with a targeted negative test;
+- the database-side `EFF_DAT` filtering should be reviewed for date validation and SQL parameterization, replacing direct value interpolation with a consistent parameterized / bind-variable based approach.
+
 Known future improvement areas:
 
 - extracting shared logic from `check_database_connections.py` and `extract_database_sources.py` into a common module such as `src/db_sources.py`;
-- using parameterized / bind-variable based `EFF_DAT` filtering more consistently;
 - adding point-in-time history handling to the manual CSV customer snapshot logic;
 - making staging handling more consistent between the database and manual CSV branches;
 - making PowerShell Python path resolution more portable through `PYTHON_EXE` override plus `python` / `py` fallback;
